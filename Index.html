@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mafia Game Lobby</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lihim Sa Baryo Game Lobby</h1>
+
+    <!-- Host sets number of players -->
+<label for="maxPlayers">Choose number of players (6–12):</label>
+<input type="number" id="maxPlayers" min="6" max="12" value="6">
+<button onclick="createLobby()">Create Lobby & Assign Roles</button>
+
+<!-- Lobby info -->
+<div id="lobby" class="lobby" style="display:none;">
+  <h2>Lobby Created</h2>
+  
+  <!-- Roles distribution summary -->
+  <div id="distribution"></div>
+  
+  <!-- Player roles list -->
+  <h3>--- Assigned Roles ---</h3>
+  <ul id="playerList"></ul>
+  
+  <button id="startBtn" onclick="startGame()">Start Game</button>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
