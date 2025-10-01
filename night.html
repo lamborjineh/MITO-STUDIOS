@@ -5,18 +5,19 @@
   <title>Night Phase</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>Night Phase</h1>
-  <div id="playerTurn"></div>
+<body onload="initNightPage()">
+  <div class="container">
+    <h1>Night <span id="dayNumber"></span> — Night Phase</h1>
+    <div id="playerTurnBox" class="lobby">
+      <div id="playerTurn"></div>
+      <div id="actionUI"></div>
+    </div>
 
-  <!-- Action buttons -->
-  <div id="actionUI" class="action-box"></div>
-
-  <button onclick="skipTurn()">Skip Turn</button>
+    <div id="nightControls" style="margin-top:16px;">
+      <button onclick="forceSkip()">Skip Player (for testing)</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
-  <script>
-    loadNightPhase();
-  </script>
 </body>
 </html>

@@ -5,16 +5,16 @@
   <title>Voting Phase</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>Voting Phase</h1>
-  <p>Select who to eliminate:</p>
-  <div id="voteOptions"></div>
-
-  <button onclick="endVoting()">End Voting</button>
+<body onload="initVotePage()">
+  <div class="container">
+    <h1>Voting Phase — Day <span id="voteDayNum"></span></h1>
+    <p>Select a player to vote out (majority not enforced in this demo — first click eliminates):</p>
+    <div id="voteOptions" class="lobby"></div>
+    <div style="margin-top:12px;">
+      <button onclick="endVoting()">End Voting (if no eliminations)</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
-  <script>
-    loadVotingPhase();
-  </script>
 </body>
 </html>
